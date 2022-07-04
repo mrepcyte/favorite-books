@@ -19,10 +19,18 @@ body {
     overflow: hidden; */
 }
 
+img {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 12px;
+    height: 100px;
+}
+
 section.books-list {
     padding: 26px;
     position: absolute;
-    top: 20px;
+    top: 0;
     left: 10px;
     user-select: none;
 }
@@ -30,31 +38,39 @@ section.books-list {
 section.books-list h1 {
     font-size: 42px;
     margin-bottom: 4px;
+    color: #598db0;
 }
 
-section.books-list p.intro {
-    border-bottom: 1px solid #66c3d1;
+section.books-list h2 {
+    border-bottom: 2px dotted #598db0;
+    padding-bottom: 8px;
+    font-weight: 300;
+    font-size: 18px;
 }
 
 section.books-list p {
     font-size: 30px;
     font-weight: 400;
     line-height: 1.4;
-    padding-top: 16px;
 }
 
 section.books-list p em::after {
     content: ' /';
-    color: green;
+    color: #a86d5f;
     font-style: normal;
 }
 
-section.books-list span {
+section.books-list.one span {
+    color: #f4f4f4;
     opacity: 0;
 }
 
+section.books-list.one p {
+    color: #000;
+    opacity: 0;
+}
 
-#two span {
+section.books-list.two span {
     color: #f4f4f4;
     opacity: 1;
 }
@@ -65,7 +81,7 @@ div.cursor {
     left: 40%;
     width: 20px;
     height: 20px;
-    background-color: #f4a15d;
+    background-color: #f3bac1;
     border-radius: 50%;
     transition: width 0.2s, height 0.2s;
 }

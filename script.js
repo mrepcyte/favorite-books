@@ -1,6 +1,6 @@
 const cursor = document.querySelector('div.cursor');
 const canvasEl = document.querySelector('canvas');
-const sectionEl = document.querySelector('#one');
+const sectionEl = document.querySelector('section.one');
 
 let isMouseDown = false;
 
@@ -33,7 +33,8 @@ setupCanvas(canvasEl);
 
 const startDrawing = (canvas, x, y) => {
     const context = canvas.getContext('2d');
-    context.strokeStyle = '#f4a15d';
+    // context.strokeStyle = '#f4a15d';
+    context.strokeStyle = '#f3bac1';
     context.moveTo(x, y);
     context.beginPath();
 };
