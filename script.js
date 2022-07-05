@@ -33,7 +33,6 @@ setupCanvas(canvasEl);
 
 const startDrawing = (canvas, x, y) => {
     const context = canvas.getContext('2d');
-    // context.strokeStyle = '#f4a15d';
     context.strokeStyle = '#f3bac1';
     context.moveTo(x, y);
     context.beginPath();
@@ -47,7 +46,7 @@ const moveDrawing = (canvas, x, y) => {
     }
 };
 
-// event listeners:
+// event listeners (desktop):
 
 document.addEventListener('mousedown', (event) => {
     isMouseDown = true;
@@ -68,6 +67,8 @@ document.addEventListener('mousemove', (event) => {
 window.addEventListener('resize', () => {
     setupCanvas(canvasEl);
 });
+
+// event listeners (mobile):
 
 document.addEventListener('touchstart', (event) => {
     isMouseDown = true;
